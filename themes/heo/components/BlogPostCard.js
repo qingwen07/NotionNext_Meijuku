@@ -1,8 +1,8 @@
 import LazyImage from '@/components/LazyImage'
-import NotionIcon from './NotionIcon'
 import { siteConfig } from '@/lib/config'
 import Link from 'next/link'
 import CONFIG from '../config'
+import NotionIcon from './NotionIcon'
 import TagItemMini from './TagItemMini'
 
 const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
@@ -87,7 +87,8 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
                 className="heo-icon w-6 h-6 mr-1 align-middle transform translate-y-[-8%]" // 专门为 Heo 主题的图标设置样式
               />
               )}
-              <span className='menu-link '>{post.title}</span>
+              {/* modify by alan 2024-11-28 span to h2 */}
+              <h2 className='menu-link '>{post.title}</h2>
             </Link>
           </header>
 
